@@ -85,7 +85,7 @@ jobs:
           APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
         with:
           releaseId: ${{ needs.create-release.outputs.release_id }}
-          args: ${{ matrix.config.os == 'macos-latest' && '--target universal-apple-darwin' || '' }}
+          args: ${{ matrix.config.os == 'macos-latest' && '--target universal-apple-darwin --no-sign' || '' }}
 
   publish-release:
     permissions:
