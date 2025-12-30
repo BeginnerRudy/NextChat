@@ -26,13 +26,13 @@ const nextConfig = {
 
     return config;
   },
-  output: mode,
+  //output: mode,
   images: {
     unoptimized: mode === "export",
   },
-  experimental: {
-    forceSwcTransforms: true,
-  },
+  //experimental: {
+  //  forceSwcTransforms: true,
+  //},
 };
 
 const CorsHeaders = [
